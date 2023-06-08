@@ -8,7 +8,7 @@
       "schematics": {},
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "ds-app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
