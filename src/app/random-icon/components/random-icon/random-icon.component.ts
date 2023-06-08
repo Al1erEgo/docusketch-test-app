@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
-import {IconName} from "@fortawesome/fontawesome-svg-core";
-import {IconPrefix} from "@fortawesome/free-solid-svg-icons";
+import {IconProp} from "@fortawesome/fontawesome-svg-core";
+import {icons} from "../data/icons";
+
+
 
 @Component({
   selector: 'ds-app-random-icon',
@@ -8,5 +10,17 @@ import {IconPrefix} from "@fortawesome/free-solid-svg-icons";
   styleUrls: ['./random-icon.component.css']
 })
 export class RandomIconComponent {
-    iconToRender: [IconPrefix, IconName] = ['fas', 'house']
+
+
+  iconToRender: IconProp;
+
+  constructor() {
+    this.iconToRender = ['fas', 'flag'];
+  }
+
+  changeIcon(): void  {
+    setTimeout(()=>{
+      this.iconToRender = icons[Math.floor(Math.random() * 14)]
+    }, 3000)
+  }
 }
