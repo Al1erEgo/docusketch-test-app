@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RandomIconComponent } from './components/random-icon/random-icon.component';
+import { FontAwesomeModule, FaIconLibrary  } from '@fortawesome/angular-fontawesome';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+
 
 
 
@@ -9,8 +12,13 @@ import { RandomIconComponent } from './components/random-icon/random-icon.compon
     RandomIconComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FontAwesomeModule,
   ],
   exports: [RandomIconComponent]
 })
-export class RandomIconModule { }
+export class RandomIconModule {
+  constructor(library: FaIconLibrary) {
+    library.addIconPacks(fas)
+  }
+}
