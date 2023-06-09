@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {IconProp} from "@fortawesome/fontawesome-svg-core";
-import {icons} from "../data/icons";
+import {icons} from "../../data/icons";
 
 
 
