@@ -20,7 +20,7 @@ export class RandomIconComponent {
 
   changeIcon(): void  {
     setTimeout(()=>{
-      this.iconToRender = icons[Math.floor(Math.random() * 14)]
+      this.iconToRender = icons[Math.floor(Math.random() * icons.length)]
     }, 3000)
   }
 }
