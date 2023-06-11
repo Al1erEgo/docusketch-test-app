@@ -11,7 +11,6 @@ import {icons} from "../../data/icons";
 })
 export class RandomIconComponent {
 
-
   iconToRender: IconProp;
 
   constructor() {
